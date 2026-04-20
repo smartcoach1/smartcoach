@@ -65,7 +65,9 @@
 
     var coachName   = hasPageIdentity ? page.coach_name   : (gym.coach_name  || "");
     var avatarUrl   = hasPageIdentity ? page.avatar_url   : (gym.avatar_url  || "");
-    var showSignoff = hasPageIdentity ? page.show_signoff : false;
+    // Normalise show_signoff — accept true boolean OR the string "true"
+    var rawSignoff  = hasPageIdentity ? page.show_signoff : false;
+    var showSignoff = (rawSignoff === true || rawSignoff === "true");
 
     // Only show signoff if coach name exists
     showSignoff = showSignoff && !!coachName;
@@ -125,7 +127,7 @@
               '</div>' +
               '<h4 class="sc2-response-headline" id="sc2-response-headline"></h4>' +
               '<p class="sc2-response-body" id="sc2-response-body"></p>' +
-              (showSignoff ? '<p class="sc2-signoff" id="sc2-signoff" style="display:none;">\u2014 ' + coachName + '</p>' : '') +
+              '<p class="sc2-signoff" id="sc2-signoff" style="display:none;">' + (showSignoff ? '\u2014 ' + coachName : '') + '</p>' +
               '<a class="sc2-cta" id="sc2-cta" href="#"></a>' +
               '<button class="sc2-back" id="sc2-back">Back</button>' +
             '</div>' +
@@ -270,6 +272,11 @@
     var card2Config   = page.card2 || {};
     var thinkingDelay = 2200;
 
+    // Re-derive showSignoff (mirrors buildHTML logic) so reveal can toggle it
+    var _hasPageIdentity = (page.coach_name && page.avatar_url && page.hasOwnProperty("show_signoff"));
+    var _rawSignoff      = _hasPageIdentity ? page.show_signoff : false;
+    var showSignoff      = (_rawSignoff === true || _rawSignoff === "true") && !!(_hasPageIdentity ? page.coach_name : (gym.coach_name || ""));
+
     var alertDelay = (page.behaviour && page.behaviour.message_alert && page.behaviour.message_alert.enabled)
       ? (page.behaviour.message_alert.delay_seconds || 10) * 1000 : null;
 
@@ -377,8 +384,8 @@
         // cta.type: "route" = internal navigation | "convert" = intent action (join/book/apply)
         cta.setAttribute("data-cta-type", item.cta.type || "route");
         cta.classList.add("sc2-visible");
-        if (signoff) signoff.style.display = "block";
-        revealText(resBody, item.body, 15);
+        if (signoff && showSignoff) signoff.style.display = "block";
+        revealText(resBody, (item.body || "").replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>"), 15);
       }, thinkingDelay);
     }
 
