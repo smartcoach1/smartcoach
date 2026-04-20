@@ -66,7 +66,7 @@
     var coachName   = hasPageIdentity ? page.coach_name   : (gym.coach_name  || "");
     var avatarUrl   = hasPageIdentity ? page.avatar_url   : (gym.avatar_url  || "");
     // Normalise show_signoff — accept true boolean OR the string "true"
-    var rawSignoff  = hasPageIdentity ? page.show_signoff : false;
+    var rawSignoff  = hasPageIdentity ? page.show_signoff : (gym.show_signoff || false);
     var showSignoff = (rawSignoff === true || rawSignoff === "true");
 
     // Only show signoff if coach name exists
@@ -274,7 +274,7 @@
 
     // Re-derive showSignoff (mirrors buildHTML logic) so reveal can toggle it
     var _hasPageIdentity = (page.coach_name && page.avatar_url && page.hasOwnProperty("show_signoff"));
-    var _rawSignoff      = _hasPageIdentity ? page.show_signoff : false;
+    var _rawSignoff      = _hasPageIdentity ? page.show_signoff : (gym.show_signoff || false);
     var showSignoff      = (_rawSignoff === true || _rawSignoff === "true") && !!(_hasPageIdentity ? page.coach_name : (gym.coach_name || ""));
 
     var alertDelay = (page.behaviour && page.behaviour.message_alert && page.behaviour.message_alert.enabled)
