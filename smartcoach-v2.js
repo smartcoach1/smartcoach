@@ -218,7 +218,7 @@
       "#sc2-root .sc2-back{display:inline-block;margin-top:20px;border:none;background:none;padding:0;color:#444;font-family:'Open Sans',Arial,sans-serif;font-size:13px;text-decoration:underline;cursor:pointer;transition:color 0.2s ease}",
       "#sc2-root .sc2-back:hover{color:var(--sc2-brand)}",
       "@media(max-width:767px){",
-        "#sc2-root{right:10px;left:auto;bottom:18px}",
+        "#sc2-root{right:10px;left:auto;bottom:36px}",
         "#sc2-root .sc2-launcher.sc2-show{display:flex;width:54px;height:54px;min-height:54px;padding:0;border-radius:50%;font-size:0;line-height:0;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.15);background:#FFFFFF;border:1.5px solid var(--sc2-brand)}",
         "#sc2-root .sc2-launcher.sc2-show::before{content:'?';display:block;font-family:system-ui,-apple-system,sans-serif;font-size:22px;font-weight:700;line-height:1;color:var(--sc2-brand);transform:translateY(-1px)}",
         "#sc2-root .sc2-card{width:calc(100vw - 16px);max-width:calc(100vw - 16px);border-radius:14px}",
