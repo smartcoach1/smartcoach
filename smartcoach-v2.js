@@ -499,6 +499,7 @@
     document.body.appendChild(container.firstChild);
     injectStyles(gym.primary_color || null);
     attachBehaviour(page, gym);
+    trackEvent("smartcoach_impression", gym.gym_id);
   }
 
   if (document.readyState === "loading") {
