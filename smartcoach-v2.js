@@ -270,6 +270,23 @@
   }
 
 
+  // ─── 4b. ATTRIBUTION FLAGS ──────────────────────────────────────────────────
+  // Stores highest interaction level in localStorage per gym.
+  // Levels: seen < engaged < acted. Never downgrade.
+
+  var SC2_ATTR_LEVELS = { "seen": 1, "engaged": 2, "acted": 3 };
+  var SC2_ATTR_KEY    = "sc2_attr_" + ((config.gym && config.gym.gym_id) || "unknown");
+
+  function setAttrFlag(level) {
+    var current = localStorage.getItem(SC2_ATTR_KEY);
+    var currentLevel = current ? (SC2_ATTR_LEVELS[current] || 0) : 0;
+    var newLevel     = SC2_ATTR_LEVELS[level] || 0;
+    if (newLevel > currentLevel) {
+      localStorage.setItem(SC2_ATTR_KEY, level);
+    }
+  }
+
+
   // ─── 5. BEHAVIOUR ────────────────────────────────────────────────────────────
 
   function attachBehaviour(page, gym) {
@@ -404,12 +421,14 @@
         lastOptionKey   = key;
         lastOptionLabel = label;
         trackEvent("option_selected", gym.gym_id, key, label);
+        setAttrFlag("engaged");
         showResponse(key);
       });
     });
 
     cta.addEventListener("click", function () {
       trackEvent("cta_clicked", gym.gym_id, lastOptionKey, lastOptionLabel);
+      setAttrFlag("acted");
     });
 
     var alertTimer, popupTimer;
@@ -500,6 +519,7 @@
     injectStyles(gym.primary_color || null);
     attachBehaviour(page, gym);
     trackEvent("smartcoach_impression", gym.gym_id);
+    setAttrFlag("seen");
   }
 
   if (document.readyState === "loading") {
