@@ -246,10 +246,12 @@
   var SC2_SUPABASE_KEY = "sb_publishable_sPZ5ng3YgrZ-bR3ld5KNkQ_eP9j0CUU";
 
   function trackEvent(eventName, gymId, optionKey, optionLabel) {
+    // Strip query string and hash from URL before storing — keeps data clean
+    var cleanUrl = window.location.origin + window.location.pathname;
     var payload = {
       event_name:   eventName,
       gym_id:       gymId || "unknown",
-      page_url:     window.location.href,
+      page_url:     cleanUrl,
       option_key:   optionKey || null,
       option_label: optionLabel || null,
       device_type:  window.innerWidth <= 767 ? "mobile" : "desktop"
