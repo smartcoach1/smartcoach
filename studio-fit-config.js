@@ -165,6 +165,9 @@ window.SmartCoachConfig = {
     "/timetable-cheltenham": {
       "name": "Cheltenham timetable",
       "enabled": true,
+      "coach_name": "Sarah",
+      "avatar_url": "https://content.app-sources.com/s/591844641304854511/uploads/Images/smart-coach-sarah-7295376.png?format=webp",
+      "show_signoff": true,
       "launcher_text": "Not sure if this fits your week?",
       "behaviour": {
         "message_alert": {
@@ -240,6 +243,9 @@ window.SmartCoachConfig = {
     "/programs-fitcamp-revolution": {
       "name": "Fitcamp",
       "enabled": true,
+      "coach_name": "Sarah",
+      "avatar_url": "https://content.app-sources.com/s/591844641304854511/uploads/Images/smart-coach-sarah-7295376.png?format=webp",
+      "show_signoff": true,
       "launcher_text": "Not sure where to start?",
       "behaviour": {
         "message_alert": {
@@ -353,7 +359,7 @@ window.SmartCoachConfig = {
       },
       "card2": {
         "start": {
-          "headline": "It's simpler that you think.",
+          "headline": "It's simpler than you think.",
           "body": "You don’t need to figure anything out first.\n\nYou show up, follow the session, and we guide you through it step by step.\n\nNo guesswork. No pressure. Just a clear place to begin.",
           "cta": {
             "label": "Get started",
@@ -544,7 +550,7 @@ window.SmartCoachConfig = {
       }
     },
     "/location-cheltenham": {
-      "name": "cheltenham",
+      "name": "Cheltenham",
       "enabled": true,
       "launcher_text": "Thinking about training in Cheltenham?",
       "behaviour": {
