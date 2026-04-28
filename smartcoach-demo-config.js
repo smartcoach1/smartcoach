@@ -9,7 +9,7 @@ window.SmartCoachConfig = {
     "show_signoff": true
   },
   "pages": {
-    "/smartcoach-demo": {
+    "/smartcoach/smartcoach-demo.html": {
       "name": "Smart Coach Demo",
       "enabled": true,
       "launcher_text": "Ask Mike anything 👋",
