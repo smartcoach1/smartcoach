@@ -3,7 +3,7 @@ window.SmartCoachConfig = {
   "fallback_mode": "silent_exit",
   "gym": {
     "gym_id": "smartcoach-demo",
-    "primary_color": "#e8ff47",
+    "primary_color": "#059669",
     "coach_name": "Mike",
     "avatar_url": "https://content.app-sources.com/s/591844641304854511/uploads/Images/new_smart_coach-5136596.png?format=webp",
     "show_signoff": true
