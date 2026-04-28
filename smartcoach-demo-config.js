@@ -51,7 +51,7 @@ window.SmartCoachConfig = {
           "body": "When someone lands on your site, Smart Coach opens naturally — asks what's holding them back, handles their hesitation, and nudges them toward enquiring. It runs 24/7 without you doing anything.",
           "cta": {
             "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach-demo#cta",
+            "url": "/smartcoach/smartcoach-demo.html",
             "type": "convert"
           }
         },
@@ -60,7 +60,7 @@ window.SmartCoachConfig = {
           "body": "No setup cost, no contract, no catch. The pilot is genuinely free — I just want gyms running it so I can see it working across different sites. After 30 days it's £147/month if you want to keep it.",
           "cta": {
             "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach-demo#cta",
+            "url": "/smartcoach/smartcoach-demo.html",
             "type": "convert"
           }
         },
@@ -69,7 +69,7 @@ window.SmartCoachConfig = {
           "body": "It's already live on Studio Fit. I'm installing it on CrossFit boxes, PT studios, Pilates and yoga studios, boutique gyms. If people visit your website before they enquire — Smart Coach helps convert more of them.",
           "cta": {
             "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach-demo#cta",
+            "url": "/smartcoach/smartcoach-demo.html",
             "type": "convert"
           }
         },
@@ -78,7 +78,7 @@ window.SmartCoachConfig = {
           "body": "I handle the whole setup for you. You don't touch any code. I build the config, install it, and it's live on your site the same day. Zero tech headaches on your end.",
           "cta": {
             "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach-demo#cta",
+            "url": "/smartcoach/smartcoach-demo.html",
             "type": "convert"
           }
         }
