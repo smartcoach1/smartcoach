@@ -114,6 +114,9 @@
     margin-bottom: 24px;
     opacity: 0;
     animation: fadeUp 0.6s ease 0.2s forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .hero-headline {
@@ -170,6 +173,24 @@
     transition: all 0.2s;
   }
   .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,255,71,0.25); }
+
+  .btn-secondary {
+    background: transparent;
+    color: rgba(245,242,238,0.6);
+    border: 1px solid rgba(245,242,238,0.2);
+    border-radius: 4px;
+    padding: 16px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: rgba(245,242,238,0.5); color: var(--white); transform: translateY(-2px); }
 
   .hero-proof {
     font-size: 13px;
@@ -768,21 +789,21 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-eyebrow">For independent gyms & fitness studios</div>
+  <div class="hero-eyebrow">Free For Independent Gyms & Fitness Studios</div>
   <h1 class="hero-headline">Every week your website <em>loses potential members.</em></h1>
-  <p class="hero-sub">Smart Coach engages visitors before they leave, answers their questions instantly, and helps turn more website traffic into enquiries, trials, and recurring monthly revenue.</p>
+  <p class="hero-sub">Smart Coach speaks to visitors before they leave, answers what's holding them back, and helps more of them get in touch.</p>
   <div class="hero-actions">
-    <a href="#demo" class="btn-primary">Try The Live Demo ↓</a>
-    <span class="hero-proof">Built by a real gym owner. Running live on Studio Fit Cheltenham.</span>
+    <a href="#cta" class="btn-primary">Get It Installed Free →</a>
+    <a href="#demo" class="btn-secondary">See It In Action ↓</a>
   </div>
-  <p style="margin-top:20px;font-size:12px;color:rgba(245,242,238,0.28);font-family:'DM Mono',monospace;letter-spacing:0.04em;animation:fadeUp 0.6s ease 0.8s forwards;opacity:0">Not a chatbot. A conversion layer built to recover hesitant visitors.</p>
+  <p style="margin-top:20px;font-size:12px;color:rgba(245,242,238,0.28);font-family:'DM Mono',monospace;letter-spacing:0.04em;animation:fadeUp 0.6s ease 0.8s forwards;opacity:0">Built by a gym owner. Running live on Studio Fit Cheltenham. Free to install.</p>
 </section>
 
 <!-- DEMO -->
 <section class="demo-section" id="demo">
   <div class="section-label">Live Demo</div>
-  <h2 class="demo-headline">See how Smart Coach turns hesitation into enquiries</h2>
-  <p class="demo-sub">Most visitors leave with unanswered questions. Smart Coach handles doubts instantly and helps more people take the next step.</p>
+  <h2 class="demo-headline">See what happens when visitors get an answer instead of leaving</h2>
+  <p class="demo-sub">Most people don't enquire because nobody answered their question at the right moment. Smart Coach does that automatically — day and night.</p>
 
   <div class="demo-frame">
     <div class="demo-bar">
@@ -799,7 +820,7 @@
         <div class="demo-page-text">
           <div class="demo-page-heading">Ready to feel stronger, fitter and more confident?</div>
           <p class="demo-page-body">Small group coaching, personal support, and a welcoming community that helps you stay consistent. No judgement. No ego. Just progress.</p>
-          <button class="demo-page-btn">Claim Free Trial</button>
+          <button class="demo-page-btn">Get In Touch</button>
         </div>
 
         <div class="widget-demo">
@@ -835,25 +856,25 @@
 <!-- HOW IT WORKS -->
 <section class="how-section">
   <div class="section-label">How It Works</div>
-  <h2 class="demo-headline">Installed in minutes. Working 24/7.</h2>
-  <p style="font-size:13px;color:rgba(245,242,238,0.3);font-family:'DM Mono',monospace;letter-spacing:0.06em;margin-top:6px;margin-bottom:16px">No staff time. No tech team. No ongoing work.</p>
-  <p class="demo-sub" style="margin-bottom:48px">Smart Coach helps convert hesitant website visitors while you coach, sleep, or run the gym.</p>
+  <h2 class="demo-headline">Set up in minutes. Running day and night.</h2>
+  <p style="font-size:13px;color:rgba(245,242,238,0.3);font-family:'DM Mono',monospace;letter-spacing:0.06em;margin-top:6px;margin-bottom:16px">No staff time. No tech headaches. Nothing to manage.</p>
+  <p class="demo-sub" style="margin-bottom:48px">Smart Coach runs quietly on your website while you coach, sleep, or run the gym.</p>
 
   <div class="steps-grid">
     <div class="step">
       <div class="step-icon">💬</div>
-      <div class="step-title">Starts conversations before visitors leave</div>
-      <p class="step-body">When someone lands on your site, Smart Coach opens a natural conversation and helps them take the next step.</p>
+      <div class="step-title">Starts a conversation before they leave</div>
+      <p class="step-body">When someone lands on your site, Smart Coach asks what's on their mind and helps them take the next step.</p>
     </div>
     <div class="step">
       <div class="step-icon">💡</div>
-      <div class="step-title">Uncovers what's stopping them joining</div>
-      <p class="step-body">Price, confidence, nerves or commitment — Smart Coach handles hesitation instantly and keeps potential members engaged.</p>
+      <div class="step-title">Finds out what's stopping them joining</div>
+      <p class="step-body">Price, nerves, confidence, commitment — handled in the moment, automatically.</p>
     </div>
     <div class="step">
       <div class="step-icon">📈</div>
-      <div class="step-title">Turns lost traffic into more enquiries</div>
-      <p class="step-body">See what pages convert best, what objections show up most, and where more members can be recovered.</p>
+      <div class="step-title">Shows you what's working</div>
+      <p class="step-body">See which pages get the most questions, what people worry about most, and where you're losing people you shouldn't be.</p>
     </div>
   </div>
 </section>
@@ -861,55 +882,55 @@
 <!-- STATS -->
 <section class="stats-section">
   <div class="stats-inner">
-    <div class="section-label">Early Results — Studio Fit Cheltenham</div>
-    <h2 class="demo-headline">Your visitors are telling you why they don't join</h2>
-    <p class="demo-sub" style="margin-bottom:48px">Week one after install on a live gym website.</p>
+    <div class="section-label">Real Results — Studio Fit Cheltenham</div>
+    <h2 class="demo-headline">Your visitors are already telling you why they don't join.</h2>
+    <p class="demo-sub" style="margin-bottom:48px">Here's what real visitors said in the first week. Real gym. Real people. No prompting.</p>
 
     <div class="stats-grid">
       <div class="stat-item">
         <div class="stat-num">67%</div>
-        <div class="stat-label">of enquiries interacted with Smart Coach first</div>
+        <div class="stat-label">of enquiries had spoken to Smart Coach first</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num" style="font-size:clamp(22px,3vw,32px);line-height:1.2">#1 hesitation uncovered</div>
+        <div class="stat-num" style="font-size:clamp(22px,3vw,32px);line-height:1.2">#1 thing visitors said:</div>
         <div class="stat-label" style="font-style:italic;color:rgba(245,242,238,0.65);margin-top:8px">"I hate walking into a gym not knowing what I'm doing"</div>
       </div>
       <div class="stat-item">
         <div class="stat-num">24/7</div>
-        <div class="stat-label">visitors can ask questions before they leave</div>
+        <div class="stat-label">visitors can ask questions any time — even at 3am</div>
       </div>
     </div>
 
-    <p style="margin-top:28px;font-size:12px;color:rgba(245,242,238,0.25);font-family:'DM Mono',monospace;letter-spacing:0.06em;text-align:center">Installed on a real gym website, not a demo.</p>
+    <p style="margin-top:28px;font-size:12px;color:rgba(245,242,238,0.25);font-family:'DM Mono',monospace;letter-spacing:0.06em;text-align:center">Running on a real gym website. Not a demo environment.</p>
   </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features-section">
-  <div class="section-label">What You Get</div>
-  <h2 class="demo-headline">Everything done for you. Free for 30 days.</h2>
-  <p class="demo-sub" style="margin-bottom:48px">We install Smart Coach on your website, handle setup, and let it run for you 24/7 — helping recover visitors who would have left without enquiring.</p>
+  <div class="section-label">What's Included</div>
+  <h2 class="demo-headline">I'll set it up for you. Free.</h2>
+  <p class="demo-sub" style="margin-bottom:48px">I install it, configure it for your gym, and let it run. You don't touch a thing.</p>
 
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-icon">💬</div>
-      <div class="feature-title">Live conversations with every visitor</div>
-      <p class="feature-body">Smart Coach speaks with website visitors instantly — answering questions, reducing hesitation, and keeping more people engaged.</p>
+      <div class="feature-title">A live conversation with every visitor</div>
+      <p class="feature-body">Smart Coach speaks to people the moment they land on your site — answering questions, easing nerves, helping them take the next step.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">💡</div>
-      <div class="feature-title">Captures what's stopping people joining</div>
-      <p class="feature-body">Discover the real objections holding people back — price, confidence, commitment, nerves, time, or uncertainty.</p>
+      <div class="feature-title">Find out what stops people joining</div>
+      <p class="feature-body">You'll see exactly what's holding your visitors back — price, confidence, commitment, time. Real answers from real people on your website.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">📊</div>
-      <div class="feature-title">See why visitors don't convert</div>
-      <p class="feature-body">Simple dashboard showing conversations, hesitation trends, engagement levels, and hidden missed opportunities.</p>
+      <div class="feature-title">See what's actually happening</div>
+      <p class="feature-body">A simple view showing which pages get the most questions, what people worry about, and how many enquiries Smart Coach helped start.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">⚡</div>
-      <div class="feature-title">Installed in minutes. Zero work for you.</div>
-      <p class="feature-body">We handle setup, install, and optimisation. No staff training, no tech headaches, no ongoing workload.</p>
+      <div class="feature-title">Set up for you. Live within 24 hours.</div>
+      <p class="feature-body">I handle everything. You don't need to touch your website or learn anything new. Just message me and it's done.</p>
     </div>
   </div>
 </section>
@@ -917,11 +938,11 @@
 <!-- CREDIBILITY -->
 <section class="cred-section">
   <div class="cred-inner">
-    <p class="cred-quote">"Most gym websites lose potential members every single week. Smart Coach gives those people a chance to speak before they disappear."</p>
+    <p class="cred-quote">"Most gym websites lose potential members every single week — not because the gym isn't good enough, but because nobody was there to answer the question at the right moment. Smart Coach fixes that."</p>
     <div class="cred-source">MIKE BEER — OWNER, STUDIO FIT CHELTENHAM</div>
     <div class="cred-badge">
       <span>✔</span>
-      Built by a gym owner &nbsp;•&nbsp; Running live now &nbsp;•&nbsp; Free pilot gyms open
+      Built by a gym owner &nbsp;•&nbsp; Running live on Studio Fit &nbsp;•&nbsp; Free setup available now
     </div>
   </div>
 </section>
@@ -929,12 +950,12 @@
 <!-- CTA -->
 <section class="cta-section" id="cta">
   <div class="cta-inner">
-    <div class="section-label">Free 30-Day Pilot</div>
-    <h2 class="cta-headline">We'll install this for free on your website.</h2>
-    <p class="cta-sub">No cost. No catch. No commitment. Fully set up for you and live in minutes.<br>I'm selecting 5 gyms to trial Smart Coach free for 30 days.</p>
+    <div class="section-label">Free Install For Gyms</div>
+    <h2 class="cta-headline">I'll install Smart Coach on your website for free.</h2>
+    <p class="cta-sub">No cost. No catch. No tech headaches.<br>I'll set it up, tailor it to your gym, and have it live within 24 hours.<br>Then you simply watch what your visitors start telling you.</p>
     <div class="cta-dm">
-      <a href="https://instagram.com/mikebeer88" target="_blank" class="cta-main-btn">Claim Free Pilot Spot →</a>
-      <span class="cta-note">@mikebeer88 · Reply usually within a few hours</span>
+      <a href="https://wa.me/447713478044" target="_blank" class="cta-main-btn">WhatsApp Mike To Get It Free →</a>
+      <span class="cta-note">Usually replies within a few hours</span>
     </div>
   </div>
 </section>
@@ -1027,7 +1048,5 @@ function enquireNow() {
   }, 150);
 }
 </script>
-  <script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.13/smartcoach-demo-config.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.9/smartcoach-v2.js"></script>
 </body>
 </html>
