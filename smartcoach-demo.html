@@ -1050,5 +1050,16 @@ function enquireNow() {
 </script>
 <script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.13/smartcoach-demo-config.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.9/smartcoach-v2.js"></script>
+<script>
+// Demo page only — override bridge card text
+const scObserver = new MutationObserver(() => {
+  document.querySelectorAll(".sc2-thinking-label").forEach(el => {
+    if (el.textContent.includes("Got it")) {
+      el.textContent = "Good question — here's my honest take:";
+    }
+  });
+});
+scObserver.observe(document.body, { childList: true, subtree: true });
+</script>
 </body>
 </html>
