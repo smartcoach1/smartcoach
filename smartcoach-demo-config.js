@@ -12,7 +12,7 @@ window.SmartCoachConfig = {
     "/smartcoach/smartcoach-demo.html": {
       "name": "Smart Coach Demo",
       "enabled": true,
-      "launcher_text": "Ask Mike anything 👋",
+      "launcher_text": "Ask Mike about free install 👋",
       "behaviour": {
         "message_alert": {
           "enabled": true,
@@ -24,61 +24,61 @@ window.SmartCoachConfig = {
         }
       },
       "card1": {
-        "headline": "Most gym owners land here with the same question.",
+        "headline": "Thinking about adding this to your gym website?",
         "options": [
           {
             "key": "how",
-            "label": "💬 How does Smart Coach actually work?"
+            "label": "💬 How would this get me more enquiries?"
           },
           {
-            "key": "cost",
-            "label": "💰 What does it cost after 30 days?"
+            "key": "desire",
+            "label": "🔥 What would Smart Coach acutually do on my website?"
           },
           {
             "key": "mygym",
-            "label": "🏋️ Will it work for my type of gym?"
+            "label": "🏋️ Would this work for my type of gym?"
           },
           {
             "key": "setup",
-            "label": "⚡ How quick is it to set up?"
+            "label": "⚡ How quickly could you set this up?"
           }
         ],
-        "subheadline": "Pick what's on your mind."
+        "subheadline": "Pick what you'd want to know first."
       },
       "card2": {
         "how": {
-          "headline": "It has a live conversation with every website visitor",
-          "body": "When someone lands on your site, Smart Coach opens naturally — asks what's holding them back, handles their hesitation, and nudges them toward enquiring. It runs 24/7 without you doing anything.",
+          "headline": "It speaks to visitors before they leave your website.",
+          "body": "Every week, gyms lose potential members who were interested — but still had one question, one hesitation, or one reason not to enquire.\n\nSmart Coach steps in at that exact moment, starts a natural conversation, answers what's holding them back, builds confidence, and helps those visitors turn into enquiries instead of disappearing. \n\nYou also uncover the real reasons people don't join right now — price, nerves, confusion, timing, commitment. \n\nThat's where hidden growth usually sits.",
           "cta": {
-            "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach/smartcoach-demo.html",
+            "label": "Get It Installed Free →",
+            "url": "/smartcoach/smartcoach-demo.html#cta",
             "type": "convert"
           }
         },
-        "cost": {
-          "headline": "Free for 30 days. £147/month after that.",
-          "body": "No setup cost, no contract, no catch. The pilot is genuinely free — I just want gyms running it so I can see it working across different sites. After 30 days it's £147/month if you want to keep it.",
+        "desire": {
+          "headline": "It turns your website from a static page into a guided experience.",
+          "body": "Instead of visitors landing, browsing quietly, and leaving, Smart Coach gives them a friendly face to interact with — answering questions, calming hesitation, and helping them feel ready to take the next step.\n\nIt can explain how your gym works, guide more people to enquire, and show you what visitors are unsure about.\n\nIt helps day and night, even when your team is unavailable.\n\nFor many gyms, it becomes the part of the website that starts the conversation.",
           "cta": {
-            "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach/smartcoach-demo.html",
+            "label": "Get It Installed Free →",
+            "url": "/smartcoach/smartcoach-demo.html#cta",
             "type": "convert"
           }
         },
         "mygym": {
-          "headline": "If you have a website and want more enquiries — yes.",
-          "body": "It's already live on Studio Fit. I'm installing it on CrossFit boxes, PT studios, Pilates and yoga studios, boutique gyms. If people visit your website before they enquire — Smart Coach helps convert more of them.",
+          "headline": "If people visit your website before joining, it’s relevant.",
+          "body": "Smart Coach works best anywhere visitors have questions, hesitation, or need a little confidence before taking the next step.\n\nThat could be personal training studios, CrossFit gyms, women’s gyms, coaching facilities, class-based gyms, boutique studios, or traditional memberships.\n\nEvery gym is different — which is why I tailor the setup to your gym, your pages, and your visitors.\n\nThat’s where the real value is.",
           "cta": {
-            "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach/smartcoach-demo.html",
+            "label": "Get It Installed Free →",
+            "url": "/smartcoach/smartcoach-demo.html#cta",
             "type": "convert"
           }
         },
         "setup": {
-          "headline": "Two lines of code. Done in minutes.",
-          "body": "I handle the whole setup for you. You don't touch any code. I build the config, install it, and it's live on your site the same day. Zero tech headaches on your end.",
+          "headline": "Usually the same day, or within 24 hours.",
+          "body": "I handle the setup myself, tailor it to your gym, and place it on the pages where it can have the biggest impact.\n\nYou don’t need to touch code, tech, or anything complicated.\n\nJust send me your website and I’ll sort the rest.",
           "cta": {
-            "label": "Claim My Free Pilot Spot",
-            "url": "/smartcoach/smartcoach-demo.html",
+            "label": "Get It Installed Free →",
+            "url": "/smartcoach/smartcoach-demo.html#cta",
             "type": "convert"
           }
         }
