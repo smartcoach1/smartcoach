@@ -1048,7 +1048,7 @@ function enquireNow() {
   }, 150);
 }
 </script>
-<script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.14/smartcoach-demo-config.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.13/smartcoach-demo-config.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/smartcoach1/smartcoach@v2.9/smartcoach-v2.js"></script>
 <script>
 // Demo page only — override bridge card text
@@ -1060,6 +1060,17 @@ const scObserver = new MutationObserver(() => {
   });
 });
 scObserver.observe(document.body, { childList: true, subtree: true });
+</script>
+<script>
+// Close widget when CTA clicked so WhatsApp button is visible
+document.addEventListener("click", function(e) {
+  if (e.target.closest(".sc2-cta")) {
+    setTimeout(() => {
+      const closeBtn = document.querySelector(".sc2-close");
+      if (closeBtn) closeBtn.click();
+    }, 100);
+  }
+});
 </script>
 </body>
 </html>
