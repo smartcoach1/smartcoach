@@ -228,6 +228,8 @@
       "#sc2-root .sc2-launcher.sc2-has-photo.sc2-show{padding:0}",
       "#sc2-root .sc2-launcher.sc2-has-photo .sc2-launcher-avatar{position:absolute;top:2.5px;left:2.5px;right:2.5px;bottom:2.5px;width:auto;height:auto;min-width:0;margin:0;box-shadow:none}",
       "#sc2-root .sc2-launcher.sc2-has-photo.sc2-show::before{position:absolute;right:-5px;bottom:-5px;width:22px;height:22px;border-radius:50%;background:var(--sc2-brand);color:#fff;font-size:13px;line-height:18px;text-align:center;border:2px solid #fff;transform:none;z-index:1}",
+      "#sc2-root .sc2-launcher.sc2-has-photo.sc2-show::before{right:-8px;bottom:-8px;width:20px;height:20px;line-height:16px;font-size:12px}",
+"#sc2-root .sc2-launcher.sc2-has-photo .sc2-launcher-avatar{transform:translateZ(0);will-change:transform;backface-visibility:hidden}",
         "#sc2-root .sc2-card{width:calc(100vw - 16px);max-width:calc(100vw - 16px);border-radius:14px}",
         "#sc2-root .sc2-inner{padding:0 12px 12px 12px}",
         "#sc2-root .sc2-topbar{padding:7px 8px 0 8px}",
