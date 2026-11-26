@@ -90,7 +90,7 @@ window.SmartCoachConfig = {
       "coach_name": "Jordan",
       "avatar_url": "https://content.app-sources.com/s/6851722238278723/uploads/Coaches_Pictures/Jamie_Chaos_Coaching-4865862.png?format=webp",
       "show_signoff": true,
-      "launcher_text": "How does it work?",
+      "launcher_text": "Wondering about training here?",
       "behaviour": {
         "message_alert": {
           "enabled": true,
@@ -165,7 +165,7 @@ window.SmartCoachConfig = {
     "/kickstart": {
       "name": "6-Week Kickstart",
       "enabled": true,
-      "launcher_text": "Is Kickstart for me?",
+      "launcher_text": "New or returning? Ask me.",
       "behaviour": {
         "message_alert": {
           "enabled": true,
@@ -240,7 +240,7 @@ window.SmartCoachConfig = {
     "/coaches": {
       "name": "Meet The Coaches",
       "enabled": true,
-      "launcher_text": "What’s the coaching like?",
+      "launcher_text": "Got a question for a coach?",
       "behaviour": {
         "message_alert": {
           "enabled": true,
@@ -318,7 +318,7 @@ window.SmartCoachConfig = {
       "coach_name": "Jordan",
       "avatar_url": "https://content.app-sources.com/s/6851722238278723/uploads/Coaches_Pictures/Jamie_Chaos_Coaching-4865862.png?format=webp",
       "show_signoff": true,
-      "launcher_text": "Is this course for me?",
+      "launcher_text": "Not sure if you're ready?",
       "behaviour": {
         "message_alert": {
           "enabled": true,
@@ -385,6 +385,159 @@ window.SmartCoachConfig = {
           "cta": {
             "label": "Enquire about the course",
             "url": "/women-strength-course-enquiry",
+            "type": "convert"
+          }
+        }
+      }
+    },
+    "/member-stories": {
+      "name": "members stories",
+      "enabled": true,
+      "launcher_text": "Is this for someone like me?",
+      "behaviour": {
+        "message_alert": {
+          "enabled": true,
+          "delay_seconds": 12
+        },
+        "card_popup": {
+          "enabled": true,
+          "delay_seconds": 30
+        }
+      },
+      "card1": {
+        "headline": "What would you want to know before starting?",
+        "options": [
+          {
+            "key": "firstvisit",
+            "label": "What happens on my first visit?"
+          },
+          {
+            "key": "belong",
+            "label": "Will I fit in?"
+          },
+          {
+            "key": "break",
+            "label": "I've had a long break from training"
+          },
+          {
+            "key": "start",
+            "label": "I'd like to talk to someone about starting"
+          }
+        ],
+        "subheadline": "Pick the one that's closest."
+      },
+      "card2": {
+        "firstvisit": {
+          "headline": "Your first visit",
+          "body": "You book a gym slot that fits your week. When you come in, you'll have a plan showing which exercises to do, and a coach on the gym floor if you're unsure how to set something up or want a lift checked.",
+          "cta": {
+            "label": "See how training works",
+            "url": "/how",
+            "type": "route"
+          }
+        },
+        "belong": {
+          "headline": "Will I fit in?",
+          "body": "It's one of the things people worry about before they start. \n\nYou train at your own pace, and you'll see the same coaches and familiar faces when you come back. Have a look at who's coaching and see for yourself.",
+          "cta": {
+            "label": "Meet the coaches",
+            "url": "/coaches",
+            "type": "route"
+          }
+        },
+        "break": {
+          "headline": "A long break is fine",
+          "body": "You wouldn't be the first to come back after time away. \n\nKickstart is six weeks of weekly one-to-one coaching, a strength programme built around you, and gym slots you can book around your week.",
+          "cta": {
+            "label": "Explore the 6-Week Kickstart",
+            "url": "/kickstart",
+            "type": "route"
+          }
+        },
+        "start": {
+          "headline": "Let's talk",
+          "body": "Answer a couple of quick questions and we'll text you to talk through what your first six weeks at Chaos could look like.",
+          "cta": {
+            "label": "Let's talk about getting started",
+            "url": "/kickstart-enquiry",
+            "type": "convert"
+          }
+        }
+      }
+    },
+    "/faq": {
+      "name": "FAQs",
+      "enabled": true,
+      "coach_name": "Jordan",
+      "avatar_url": "https://content.app-sources.com/s/6851722238278723/uploads/Coaches_Pictures/Jamie_Chaos_Coaching-4865862.png?format=webp",
+      "show_signoff": true,
+      "launcher_text": "Can't find your answer?",
+      "behaviour": {
+        "message_alert": {
+          "enabled": true,
+          "delay_seconds": 10
+        },
+        "card_popup": {
+          "enabled": false,
+          "delay_seconds": 20
+        }
+      },
+      "card1": {
+        "headline": "What can I help you with?",
+        "options": [
+          {
+            "key": "whichone",
+            "label": "Which option suits me?"
+          },
+          {
+            "key": "nervous",
+            "label": "I'm nervous about starting"
+          },
+          {
+            "key": "other",
+            "label": "I have a different question"
+          },
+          {
+            "key": "start",
+            "label": "I'd like to talk to someone about starting"
+          }
+        ],
+        "subheadline": "Pick the one that's closest."
+      },
+      "card2": {
+        "whichone": {
+          "headline": "Which option suits you?",
+          "body": "There are three ways to train. In a regular gym slot, you follow your own programme at your own pace. \n\nThe 6-Week Kickstart gives you one-to-one time with a coach every week for six weeks, plus a programme built around you. \n\nThe Women's Strength Course is coached in a small, women-only group. Not sure which? Tell us a bit about you and we'll point you the right way.",
+          "cta": {
+            "label": "Let's talk about getting started",
+            "url": "/kickstart-enquiry",
+            "type": "convert"
+          }
+        },
+        "nervous": {
+          "headline": "That's completely normal",
+          "body": "You won't be left to work it out on your own. A coach can show you how to set up the equipment, talk you through an exercise and help you choose a weight to start with, and you can ask questions as you go.",
+          "cta": {
+            "label": "See how training works",
+            "url": "/how",
+            "type": "route"
+          }
+        },
+        "other": {
+          "headline": "Ask us directly",
+          "body": "Send us a message about training at Chaos or visiting the gym and we'll get back to you as soon as we can.",
+          "cta": {
+            "label": "Contact us",
+            "url": "/contact",
+            "type": "route"
+          }
+        },
+        "start": {
+          "headline": "Let's talk",
+          "body": "Answer a couple of quick questions and we'll text you to talk through what your first six weeks at Chaos could look like.",
+          "cta": {
+            "label": "Let's talk about getting started",
+            "url": "/kickstart-enquiry",
             "type": "convert"
           }
         }
