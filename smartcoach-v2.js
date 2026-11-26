@@ -89,6 +89,7 @@
       '<div id="sc2-root">' +
 
         '<div class="sc2-launcher" id="sc2-launcher">' +
+      (avatarUrl ? '<span class="sc2-launcher-avatar" id="sc2-launcher-avatar"></span>' : '') +
           (launcherText ? '<span class="sc2-launcher-text">' + launcherText + '</span>' : '') +
           '<span class="sc2-badge" id="sc2-badge">1</span>' +
         '</div>' +
@@ -174,6 +175,9 @@
       "#sc2-root .sc2-launcher:hover{transform:translateY(-1px);box-shadow:0 14px 32px rgba(0,0,0,0.28);opacity:0.92}",
       "#sc2-root .sc2-launcher.sc2-show{display:inline-flex}",
       "#sc2-root .sc2-launcher-text{display:inline-block}",
+      "#sc2-root .sc2-launcher-avatar{display:none}",
+      "#sc2-root .sc2-launcher.sc2-has-photo{padding-left:10px}",
+      "#sc2-root .sc2-launcher.sc2-has-photo .sc2-launcher-avatar{display:block;width:38px;height:38px;min-width:38px;border-radius:50%;margin-right:10px;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#fff;box-shadow:0 0 0 2px rgba(255,255,255,0.9)}",
       "@keyframes sc2PulseGlow{0%{box-shadow:0 0 0 0 rgba(0,0,0,0.22)}70%{box-shadow:0 0 0 12px rgba(0,0,0,0)}100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}}",
       "#sc2-root .sc2-launcher.sc2-pulse{animation:sc2PulseGlow 2.6s ease-out infinite}",
       "#sc2-root .sc2-badge{position:absolute;top:-8px;right:-8px;background:#E8221E;color:#fff;font-size:11px;font-weight:700;width:20px;height:20px;border-radius:50%;display:none;align-items:center;justify-content:center;line-height:20px;border:2px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,0.22)}",
@@ -221,6 +225,9 @@
         "#sc2-root{right:10px;left:auto;bottom:36px}",
         "#sc2-root .sc2-launcher.sc2-show{display:flex;width:54px;height:54px;min-height:54px;padding:0;border-radius:50%;font-size:0;line-height:0;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,0.15);background:#FFFFFF;border:1.5px solid var(--sc2-brand)}",
         "#sc2-root .sc2-launcher.sc2-show::before{content:'?';display:block;font-family:system-ui,-apple-system,sans-serif;font-size:22px;font-weight:700;line-height:1;color:var(--sc2-brand);transform:translateY(-1px)}",
+      "#sc2-root .sc2-launcher.sc2-has-photo.sc2-show{padding:0}",
+      "#sc2-root .sc2-launcher.sc2-has-photo .sc2-launcher-avatar{position:absolute;top:2.5px;left:2.5px;right:2.5px;bottom:2.5px;width:auto;height:auto;min-width:0;margin:0;box-shadow:none}",
+      "#sc2-root .sc2-launcher.sc2-has-photo.sc2-show::before{position:absolute;right:-5px;bottom:-5px;width:22px;height:22px;border-radius:50%;background:var(--sc2-brand);color:#fff;font-size:13px;line-height:18px;text-align:center;border:2px solid #fff;transform:none;z-index:1}",
         "#sc2-root .sc2-card{width:calc(100vw - 16px);max-width:calc(100vw - 16px);border-radius:14px}",
         "#sc2-root .sc2-inner{padding:0 12px 12px 12px}",
         "#sc2-root .sc2-topbar{padding:7px 8px 0 8px}",
@@ -322,6 +329,23 @@
     var backBtn  = document.getElementById("sc2-back");
     var badge    = document.getElementById("sc2-badge");
     var signoff  = document.getElementById("sc2-signoff");
+    var _avatarUrl     = _hasPageIdentity ? page.avatar_url : (gym.avatar_url || "");
+var _coachName     = _hasPageIdentity ? page.coach_name : (gym.coach_name || "");
+var launcherAvatar = document.getElementById("sc2-launcher-avatar");
+if (launcherAvatar && _avatarUrl) {
+  var probe = new Image();
+  probe.onload = function () {
+        launcherAvatar.style.backgroundImage = 'url("' + String(_avatarUrl).replace(/"/g, "%22") + '")';
+    launcher.classList.add("sc2-has-photo");
+    launcher.setAttribute("role", "button");
+    launcher.setAttribute("tabindex", "0");
+    launcher.setAttribute("aria-label", "Open Smart Coach" + (_coachName ? " with " + _coachName : "") + (page.launcher_text ? ": " + page.launcher_text : ""));
+    launcher.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); launcher.click(); }
+    });
+  };
+  probe.src = _avatarUrl;
+}
 
     var storageKey = "sc2_seen_" + gym.gym_id + "_" + window.location.pathname;
 
